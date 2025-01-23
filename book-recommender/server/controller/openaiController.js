@@ -46,10 +46,10 @@ export const queryOpenAI = async (req, res, next) => {
         -Based the database schema and analyzed user input, create a SQL query that will return three results.
     `;
   try {
-    const completion = await openai.chat.completion.create({
+    const completion = await openai.chat.completions.create({
       model: 'gpt-4o',
-      logprobs: true,
-      top_logprobs: 3,
+      //   logprobs: true,
+      //   top_logprobs: 3,
       messages: [
         {
           role: 'system',
@@ -60,24 +60,29 @@ export const queryOpenAI = async (req, res, next) => {
           content: naturalLanguageQuery,
         },
       ],
+      n: 3,
     });
 
     // debugging
-    // console.log('AopenAI Response: ', completion.choices[0]?.message);
+    console.log('AopenAI Response: ', completion.choices[0]?.message);
     // console.log('logs: ', completion.choices[0]?.logprobs?.content);
 
-    if (!completion.choices[0]?.message.content) {
-      const error = {
-        log: 'OpenAI did not return a completion.',
-        status: 500,
-        message: {
-          err: 'An error occured while querying OpenAI',
-        },
-      };
-      return next(error);
-    }
+    // if (!completion.choices[0]?.message.content) {
+    //   const error = {
+    //     log: 'OpenAI did not return a completion.',
+    //     status: 500,
+    //     message: {
+    //       err: 'An error occured while querying OpenAI',
+    //     },
+    //   };
+    //   return next(error);
+    // }
 
-    res.locals.databaseQuery = completion.choices[0].message.conent?.toString();
+    const databaseQuery = completion.choices[0]?.message?.content;
+    res.locals.databaseQuery = databaseQuery.trim();
+
+    // res.locals.databaseQuery =
+    //   completion.choices[0].message.content?.toString();
 
     return next();
   } catch (err) {

@@ -7,7 +7,7 @@ function App() {
   //User's input for openai
   const [databaseQuery, setDatabaseQuery] = useState('');
   //User's query for user
-  const [userQuery, setUserQuery] = useState('');
+  const [naturalLanguageQuery, setNaturalLanguageQuery] = useState('');
   //Recommendation is database query result
   const [recommendation, setRecommendation] = useState([]);
   const [loading, setLoading] = useState(false);
@@ -26,7 +26,7 @@ function App() {
         headers: {
           'Content-Type': 'application/json',
         },
-        body: JSON.stringify({ userQuery }),
+        body: JSON.stringify({ naturalLanguageQuery }),
       });
       if (!converterResponse.ok) {
         const parsedError = await converterResponse.json();
@@ -53,8 +53,8 @@ function App() {
           I want to read a book about:{' '}
           <input
             type='text'
-            value={userQuery}
-            onChange={(e) => setUserQuery(e.target.value)}
+            value={naturalLanguageQuery}
+            onChange={(e) => setNaturalLanguageQuery(e.target.value)}
             placeholder='Enter a description of what you are looking for'
           />
         </label>
