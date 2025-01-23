@@ -1,6 +1,7 @@
 import express from 'express';
 import cors from 'cors';
 import 'dotenv/config';
+import { parseNaturalLanguageQuery } from './controller/userController.js';
 import { queryDatabase } from './controller/databaseController.js';
 import { queryOpenAI } from './controllers/openaiController.js';
 
@@ -9,7 +10,8 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
-app.get('/api', queryOpenAI, queryDatabase, (req, res) => {
+
+app.get('/api', parseNaturalLanguageQuery,queryOpenAI, queryDatabase, (req, res) => {
   return res.status(200).json(res.locals.recommendation);
 });
 
