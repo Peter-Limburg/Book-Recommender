@@ -2,13 +2,14 @@ import express from 'express';
 import cors from 'cors';
 import 'dotenv/config';
 import { queryDatabase } from './controller/databaseController.js';
+import { queryOpenAI } from './controllers/openaiController.js';
 
 const app = express();
 
 app.use(cors());
 app.use(express.json());
 
-app.get('/api', queryDatabase, (req, res) => {
+app.get('/api', queryOpenAI, queryDatabase, (req, res) => {
   return res.status(200).json(res.locals.recommendation);
 });
 
