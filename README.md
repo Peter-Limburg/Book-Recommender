@@ -1,480 +1,488 @@
 # Book-Recommender
 
+
 {
   "books": [
     {
-      "id": 1,
-      "title": "Pride and Prejudice",
-      "author": "Jane Austen",
-      "year": 1813,
-      "description": "A romantic novel following Elizabeth Bennet as she deals with issues of manners, upbringing, morality, education, and marriage in the society of the landed gentry of early 19th-century England."
-    },
-    {
-      "id": 2,
-      "title": "1984",
-      "author": "George Orwell",
-      "year": 1949,
-      "description": "A dystopian novel set in a totalitarian society that explores themes of surveillance, censorship, and the manipulation of truth."
-    },
-    {
-      "id": 3,
-      "title": "To Kill a Mockingbird",
-      "author": "Harper Lee",
-      "year": 1960,
-      "description": "A novel examining racial injustice in the American South through the eyes of young Scout Finch as her father defends a Black man falsely accused of a crime."
-    },
-    {
-      "id": 4,
-      "title": "One Hundred Years of Solitude",
-      "author": "Gabriel García Márquez",
-      "year": 1967,
-      "description": "A landmark magical realist novel chronicling seven generations of the Buendía family in the mythical town of Macondo."
-    },
-    {
-      "id": 5,
-      "title": "The Great Gatsby",
-      "author": "F. Scott Fitzgerald",
-      "year": 1925,
-      "description": "A novel depicting the decadence and excess of the Jazz Age through the story of mysterious millionaire Jay Gatsby and his obsession with Daisy Buchanan."
-    },
-    {
-      "id": 6,
-      "title": "Don Quixote",
-      "author": "Miguel de Cervantes",
-      "year": 1605,
-      "description": "A Spanish novel following the adventures of a nobleman who, after reading too many chivalric romances, loses his sanity and decides to become a knight-errant."
-    },
-    {
-      "id": 7,
-      "title": "Beloved",
-      "author": "Toni Morrison",
-      "year": 1987,
-      "description": "A powerful novel about a former slave haunted by the ghost of her baby daughter, exploring themes of trauma, memory, and the lasting impact of slavery."
-    },
-    {
-      "id": 8,
-      "title": "The Catcher in the Rye",
-      "author": "J.D. Salinger",
-      "year": 1951,
-      "description": "A coming-of-age novel following Holden Caulfield's experiences in New York City after being expelled from his boarding school."
-    },
-    {
-      "id": 9,
-      "title": "Crime and Punishment",
-      "author": "Fyodor Dostoevsky",
-      "year": 1866,
-      "description": "A psychological novel about a poor student who commits murder, exploring themes of morality, guilt, and redemption."
-    },
-    {
-      "id": 10,
-      "title": "The Lord of the Rings",
-      "author": "J.R.R. Tolkien",
-      "year": 1954,
-      "description": "An epic high-fantasy novel following the quest to destroy a powerful ring and defeat the Dark Lord Sauron."
-    },
-    {
-      "id": 11,
-      "title": "Ulysses",
-      "author": "James Joyce",
-      "year": 1922,
-      "description": "A modernist novel following Leopold Bloom through Dublin over the course of one day, paralleling Homer's Odyssey."
-    },
-    {
-      "id": 12,
-      "title": "The Color Purple",
-      "author": "Alice Walker",
-      "year": 1982,
-      "description": "An epistolary novel depicting the life of African American women in the American South in the 1930s."
-    },
-    {
-      "id": 13,
-      "title": "Brave New World",
-      "author": "Aldous Huxley",
-      "year": 1932,
-      "description": "A dystopian novel set in a genetically engineered future society organized by intelligence classes."
-    },
-    {
-      "id": 14,
-      "title": "The Hobbit",
-      "author": "J.R.R. Tolkien",
-      "year": 1937,
-      "description": "A fantasy novel about Bilbo Baggins' adventure with thirteen dwarves to reclaim their mountain home from a dragon."
-    },
-    {
-      "id": 15,
-      "title": "Frankenstein",
-      "author": "Mary Shelley",
-      "year": 1818,
-      "description": "A Gothic novel about a young scientist who creates a sapient creature in an unorthodox experiment."
-    },
-    {
-      "id": 16,
-      "title": "The Grapes of Wrath",
-      "author": "John Steinbeck",
-      "year": 1939,
-      "description": "A novel following the Joad family's journey to California during the Great Depression and Dust Bowl era."
-    },
-    {
-      "id": 17,
-      "title": "Jane Eyre",
-      "author": "Charlotte Brontë",
-      "year": 1847,
-      "description": "A Gothic romance following the life of Jane Eyre, from her troubled childhood to her role as governess at Thornfield Hall."
-    },
-    {
-      "id": 18,
-      "title": "The Trial",
-      "author": "Franz Kafka",
-      "year": 1925,
-      "description": "A novel about a bank clerk who is arrested and prosecuted by a remote, inaccessible authority, with the nature of his crime revealed neither to him nor to the reader."
-    },
-    {
-      "id": 19,
-      "title": "Moby-Dick",
-      "author": "Herman Melville",
-      "year": 1851,
-      "description": "An epic novel about Captain Ahab's obsessive quest for revenge against the white whale Moby Dick."
-    },
-    {
-      "id": 20,
-      "title": "The Odyssey",
-      "author": "Homer",
-      "year": -800,
-      "description": "An ancient Greek epic poem following Odysseus's ten-year journey home after the Trojan War."
-    },
-    {
-      "id": 21,
-      "title": "The Bell Jar",
-      "author": "Sylvia Plath",
-      "year": 1963,
-      "description": "A semi-autobiographical novel about a young woman's descent into mental illness while pursuing a career in publishing."
-    },
-    {
-      "id": 22,
-      "title": "The Count of Monte Cristo",
-      "author": "Alexandre Dumas",
-      "year": 1844,
-      "description": "An adventure novel about a man who escapes prison, acquires a fortune, and seeks revenge against those who wrongfully imprisoned him."
-    },
-    {
-      "id": 23,
-      "title": "The Picture of Dorian Gray",
-      "author": "Oscar Wilde",
-      "year": 1890,
-      "description": "A Gothic novel about a beautiful young man who remains eternally youthful while a portrait of him ages and records his sins."
-    },
-    {
-      "id": 24,
-      "title": "The Handmaid's Tale",
-      "author": "Margaret Atwood",
-      "year": 1985,
-      "description": "A dystopian novel set in a theocratic society where women are stripped of their rights and forced into various classes of reproduction-focused servants."
-    },
-    {
-      "id": 25,
-      "title": "War and Peace",
-      "author": "Leo Tolstoy",
-      "year": 1869,
-      "description": "An epic novel following five aristocratic families in Russia during the Napoleonic Era."
-    },
-    {
-      "id": 26,
-      "title": "The Brothers Karamazov",
-      "author": "Fyodor Dostoevsky",
-      "year": 1880,
-      "description": "A philosophical novel that explores faith, doubt, and morality through the story of three brothers and their father's murder."
-    },
-    {
-      "id": 27,
-      "title": "The Sound and the Fury",
-      "author": "William Faulkner",
-      "year": 1929,
-      "description": "A modernist novel chronicling the decline of the Compson family, told from four different perspectives."
-    },
-    {
-      "id": 28,
-      "title": "Catch-22",
-      "author": "Joseph Heller",
-      "year": 1961,
-      "description": "A satirical war novel set during World War II, following U.S. Air Force Captain John Yossarian and his attempts to survive the war."
-    },
-    {
-      "id": 29,
-      "title": "The Scarlet Letter",
-      "author": "Nathaniel Hawthorne",
-      "year": 1850,
-      "description": "A historical novel set in Puritan Massachusetts, following Hester Prynne who conceives a daughter through an affair and struggles to create a new life of repentance and dignity."
-    },
-    {
-      "id": 30,
-      "title": "One Flew Over the Cuckoo's Nest",
-      "author": "Ken Kesey",
-      "year": 1962,
-      "description": "A novel set in a psychiatric hospital, following Randle Patrick McMurphy's rebellion against the authoritarian Nurse Ratched."
-    },
-    {
-      "id": 31,
-      "title": "The Alchemist",
-      "author": "Paulo Coelho",
-      "year": 1988,
-      "description": "A philosophical novel about a young Andalusian shepherd who travels to Egypt in search of treasure, discovering the importance of following one's dreams."
-    },
-    {
-      "id": 32,
-      "title": "The Road",
-      "author": "Cormac McCarthy",
-      "year": 2006,
-      "description": "A post-apocalyptic novel following a father and son's journey through a devastated America, exploring themes of survival and moral preservation."
-    },
-    {
-      "id": 33,
-      "title": "The Name of the Rose",
-      "author": "Umberto Eco",
-      "year": 1980,
-      "description": "A historical murder mystery set in an Italian monastery in 1327, combining literary theory, biblical analysis, and medieval studies."
-    },
-    {
-      "id": 34,
-      "title": "The Canterbury Tales",
-      "author": "Geoffrey Chaucer",
-      "year": 1400,
-      "description": "A collection of 24 stories that follows pilgrims telling tales during their journey to Canterbury Cathedral."
-    },
-    {
-      "id": 35,
-      "title": "The Little Prince",
-      "author": "Antoine de Saint-Exupéry",
-      "year": 1943,
-      "description": "A poetic tale about a young prince who visits various planets, addressing themes of love, loss, and human nature."
-    },
-    {
-      "id": 36,
-      "title": "The Stranger",
-      "author": "Albert Camus",
-      "year": 1942,
-      "description": "An existentialist novel about a French Algerian who commits a murder and is condemned to death, exploring themes of absurdism and alienation."
-    },
-    {
-      "id": 37,
-      "title": "Things Fall Apart",
-      "author": "Chinua Achebe",
-      "year": 1958,
-      "description": "A novel about the life of Okonkwo, a leader and wrestling champion in a fictional Nigerian village, exploring the effects of colonialism."
-    },
-    {
-      "id": 38,
-      "title": "The Wind-Up Bird Chronicle",
-      "author": "Haruki Murakami",
-      "year": 1994,
-      "description": "A surrealist novel following a man's search for his missing wife that evolves into a journey through Japan's dark history."
-    },
-    {
-      "id": 39,
-      "title": "Anna Karenina",
-      "author": "Leo Tolstoy",
-      "year": 1877,
-      "description": "A novel about a married aristocrat who enters into a life-changing affair with a wealthy count, set against the backdrop of Russian society."
-    },
+        "id": 1,
+        "title": "Pride and Prejudice",
+        "author": "Jane Austen",
+        "year": 1813,
+        "genre": "Romance",
+        "description": "A romantic novel following Elizabeth Bennet as she deals with issues of manners, upbringing, morality, education, and marriage in the society of the landed gentry of early 19th-century England."
+      },
+      {
+        "id": 2,
+        "title": "1984",
+        "author": "George Orwell",
+        "year": 1949,
+        "genre": "Science Fiction",
+        "description": "A dystopian novel set in a totalitarian society that explores themes of surveillance, censorship, and the manipulation of truth."
+      },
+      {
+        "id": 3,
+        "title": "To Kill a Mockingbird",
+        "author": "Harper Lee",
+        "year": 1960,
+        "genre": "Literary Fiction",
+        "description": "A novel examining racial injustice in the American South through the eyes of young Scout Finch as her father defends a Black man falsely accused of a crime."
+      },
+      {
+        "id": 4,
+        "title": "One Hundred Years of Solitude",
+        "author": "Gabriel García Márquez",
+        "year": 1967,
+        "genre": "Literary Fiction",
+        "description": "A novel chronicling seven generations of the Buendía family in the mythical town of Macondo."
+      },
+      {
+        "id": 5,
+        "title": "The Great Gatsby",
+        "author": "F. Scott Fitzgerald",
+        "year": 1925,
+        "genre": "Literary Fiction",
+        "description": "A novel depicting the decadence and excess of the Jazz Age through the story of mysterious millionaire Jay Gatsby and his obsession with Daisy Buchanan."
+      },
+      {
+        "id": 6,
+        "title": "Don Quixote",
+        "author": "Miguel de Cervantes",
+        "year": 1605,
+        "genre": "Adventure",
+        "description": "A Spanish novel following the adventures of a nobleman who, after reading too many chivalric romances, loses his sanity and decides to become a knight-errant."
+      },
+      {
+        "id": 7,
+        "title": "Beloved",
+        "author": "Toni Morrison",
+        "year": 1987,
+        "genre": "Literary Fiction",
+        "description": "A powerful novel about a former slave haunted by the ghost of her baby daughter, exploring themes of trauma, memory, and the lasting impact of slavery."
+      },
+      {
+        "id": 8,
+        "title": "The Catcher in the Rye",
+        "author": "J.D. Salinger",
+        "year": 1951,
+        "genre": "Literary Fiction",
+        "description": "A coming-of-age novel following Holden Caulfield's experiences in New York City after being expelled from his boarding school."
+      },
+      {
+        "id": 9,
+        "title": "Crime and Punishment",
+        "author": "Fyodor Dostoevsky",
+        "year": 1866,
+        "genre": "Literary Fiction",
+        "description": "A psychological novel about a poor student who commits murder, exploring themes of morality, guilt, and redemption."
+      },
+      {
+        "id": 10,
+        "title": "The Lord of the Rings",
+        "author": "J.R.R. Tolkien",
+        "year": 1954,
+        "genre": "Fantasy",
+        "description": "An epic fantasy novel following the quest to destroy a powerful ring and defeat the Dark Lord Sauron."
+      },
+      {
+        "id": 11,
+        "title": "The Grapes of Wrath",
+        "author": "John Steinbeck",
+        "year": 1939,
+        "genre": "Historical Fiction",
+        "description": "A novel following the Joad family's journey to California during the Great Depression and Dust Bowl era."
+      },
+      {
+        "id": 12,
+        "title": "Dracula",
+        "author": "Bram Stoker",
+        "year": 1897,
+        "genre": "Horror",
+        "description": "A Gothic horror novel about Count Dracula's attempt to move from Transylvania to England and the battle between him and a group led by Professor Van Helsing."
+      },
+      {
+        "id": 13,
+        "title": "The Old Man and the Sea",
+        "author": "Ernest Hemingway",
+        "year": 1952,
+        "genre": "Literary Fiction",
+        "description": "A novella about an aging Cuban fisherman who struggles with a giant marlin far out in the Gulf Stream."
+      },
+      {
+        "id": 14,
+        "title": "Wuthering Heights",
+        "author": "Emily Brontë",
+        "year": 1847,
+        "genre": "Romance",
+        "description": "A passionate story about the destructive love between Catherine Earnshaw and Heathcliff on the Yorkshire moors."
+      },
+      {
+        "id": 15,
+        "title": "The Color Purple",
+        "author": "Alice Walker",
+        "year": 1982,
+        "genre": "Literary Fiction",
+        "description": "An epistolary novel depicting the life of African American women in the American South in the 1930s."
+      },
+      {
+        "id": 16,
+        "title": "The Scarlet Letter",
+        "author": "Nathaniel Hawthorne",
+        "year": 1850,
+        "genre": "Historical Fiction",
+        "description": "A historical novel about Hester Prynne who conceives a daughter through an affair and struggles to create a new life of repentance and dignity."
+      },
+      {
+        "id": 17,
+        "title": "The Sound and the Fury",
+        "author": "William Faulkner",
+        "year": 1929,
+        "genre": "Literary Fiction",
+        "description": "A modernist novel chronicling the decline of the Compson family, told from four different perspectives."
+      },
+      {
+        "id": 18,
+        "title": "Heart of Darkness",
+        "author": "Joseph Conrad",
+        "year": 1899,
+        "genre": "Adventure",
+        "description": "A novella about a voyage up the Congo River into the Congo Free State, exploring imperialism and racism."
+      },
+      {
+        "id": 19,
+        "title": "The Picture of Dorian Gray",
+        "author": "Oscar Wilde",
+        "year": 1890,
+        "genre": "Horror",
+        "description": "A Gothic novel about a beautiful young man who remains eternally youthful while a portrait of him ages and records his sins."
+      },
+      {
+        "id": 20,
+        "title": "Rebecca",
+        "author": "Daphne du Maurier",
+        "year": 1938,
+        "genre": "Mystery",
+        "description": "A mystery novel about a young woman who marries a wealthy widower and lives in the shadow of his first wife, Rebecca."
+      },
+      {
+        "id": 21,
+        "title": "The Sun Also Rises",
+        "author": "Ernest Hemingway",
+        "year": 1926,
+        "genre": "Literary Fiction",
+        "description": "A novel about American and British expatriates traveling from Paris to Pamplona, depicting the Lost Generation."
+      },
+      {
+        "id": 22,
+        "title": "Invisible Man",
+        "author": "Ralph Ellison",
+        "year": 1952,
+        "genre": "Literary Fiction",
+        "description": "A novel about an African American man whose color renders him invisible in society, exploring themes of identity and racism."
+      },
+      {
+        "id": 23,
+        "title": "On the Road",
+        "author": "Jack Kerouac",
+        "year": 1957,
+        "genre": "Literary Fiction",
+        "description": "A novel based on the travels of Kerouac and his friends across the United States, defining the Beat Generation."
+      },
+      {
+        "id": 24,
+        "title": "The Call of the Wild",
+        "author": "Jack London",
+        "year": 1903,
+        "genre": "Adventure",
+        "description": "A story about a domesticated dog who reverts to his primitive instincts in the Canadian Yukon Territory."
+      },
+      {
+        "id": 25,
+        "title": "The Good Earth",
+        "author": "Pearl S. Buck",
+        "year": 1931,
+        "genre": "Historical Fiction",
+        "description": "A novel about a Chinese farmer and his connection to the land, depicting life in agrarian China."
+      },
+      {
+        "id": 26,
+        "title": "The Awakening",
+        "author": "Kate Chopin",
+        "year": 1899,
+        "genre": "Literary Fiction",
+        "description": "A novel about a woman's struggle against the social constraints of late 19th-century Louisiana Creole society."
+      },
+      {
+        "id": 27,
+        "title": "As I Lay Dying",
+        "author": "William Faulkner",
+        "year": 1930,
+        "genre": "Literary Fiction",
+        "description": "A novel about the death of Addie Bundren and her family's quest to honor her wish to be buried in her hometown."
+      },
+      {
+        "id": 28,
+        "title": "Native Son",
+        "author": "Richard Wright",
+        "year": 1940,
+        "genre": "Literary Fiction",
+        "description": "A novel following a young African American man in Chicago whose life spirals after he kills a young white woman in a moment of panic."
+      },
+      {
+        "id": 29,
+        "title": "The Age of Innocence",
+        "author": "Edith Wharton",
+        "year": 1920,
+        "genre": "Romance",
+        "description": "A novel about New York's upper class in the 1870s, focusing on a man's struggle between duty and passion."
+      },
+      {
+        "id": 30,
+        "title": "The Maltese Falcon",
+        "author": "Dashiell Hammett",
+        "year": 1930,
+        "genre": "Mystery",
+        "description": "A hard-boiled detective novel featuring Sam Spade's hunt for a priceless jewel-encrusted falcon statuette."
+      },
+      {
+        "id": 31,
+        "title": "The Seven Husbands of Evelyn Hugo",
+        "author": "Taylor Jenkins Reid",
+        "year": 2017,
+        "genre": "Literary Fiction",
+        "description": "A reclusive Hollywood legend reveals her life story to an unknown journalist, including the truth about her seven marriages and her one great love."
+      },
+      {
+        "id": 32,
+        "title": "Klara and the Sun",
+        "author": "Kazuo Ishiguro",
+        "year": 2021,
+        "genre": "Science Fiction",
+        "description": "An Artificial Friend observes the world from a store window, hoping to be chosen by a customer while contemplating human nature and consciousness."
+      },
+      {
+        "id": 33,
+        "title": "The Midnight Library",
+        "author": "Matt Haig",
+        "year": 2020,
+        "genre": "Fantasy",
+        "description": "A library between life and death contains books of alternate lives that could have been, offering one woman a chance to experience different versions of her life."
+      },
+      {
+        "id": 34,
+        "title": "Mexican Gothic",
+        "author": "Silvia Moreno-Garcia",
+        "year": 2020,
+        "genre": "Horror",
+        "description": "A young woman investigates her cousin's claims of supernatural horrors at a remote mansion in 1950s Mexico."
+      },
+      {
+        "id": 35,
+        "title": "The Invisible Life of Addie LaRue",
+        "author": "V.E. Schwab",
+        "year": 2020,
+        "genre": "Fantasy",
+        "description": "A woman makes a Faustian bargain to live forever but is cursed to be forgotten by everyone she meets, until one day someone remembers her."
+      },
+      {
+        "id": 36,
+        "title": "Demon Copperhead",
+        "author": "Barbara Kingsolver",
+        "year": 2022,
+        "genre": "Literary Fiction",
+        "description": "A modern retelling of David Copperfield set in Appalachia, following a boy born to a single mother in a single-wide trailer."
+      },
+      {
+        "id": 37,
+        "title": "Lessons in Chemistry",
+        "author": "Bonnie Garmus",
+        "year": 2022,
+        "genre": "Historical Fiction",
+        "description": "A female chemist becomes a cooking show host in the 1960s, using her platform to teach women science and challenge gender roles."
+      },
+      {
+        "id": 38,
+        "title": "Black Cake",
+        "author": "Charmaine Wilkerson",
+        "year": 2022,
+        "genre": "Literary Fiction",
+        "description": "Two estranged siblings uncover their mother's secret past through a traditional Caribbean black cake recipe and a series of recordings."
+      },
+      {
+        "id": 39,
+        "title": "Sea of Tranquility",
+        "author": "Emily St. John Mandel",
+        "year": 2022,
+        "genre": "Science Fiction",
+        "description": "An auteur investigates a time travel anomaly linking a British exile in 1912, a moon colony writer, and a pandemic-era violinist."
+      },
+
     {
       "id": 40,
       "title": "Slaughterhouse-Five",
       "author": "Kurt Vonnegut",
       "year": 1969,
+      "genre": "Science Fiction",
       "description": "An anti-war novel that follows Billy Pilgrim, a chaplain's assistant in World War II who becomes 'unstuck in time.'"
     },
     {
       "id": 41,
-      "title": "The Divine Comedy",
-      "author": "Dante Alighieri",
-      "year": 1320,
-      "description": "An epic poem describing Dante's journey through Hell, Purgatory, and Paradise, guided by the Roman poet Virgil and his beloved Beatrice."
+      "title": "The Kite Runner",
+      "author": "Khaled Hosseini",
+      "year": 2003,
+      "genre": "Literary Fiction",
+      "description": "A story of friendship, betrayal, and redemption that follows an Afghan boy's journey from Kabul to America and back again."
     },
     {
       "id": 42,
       "title": "The Master and Margarita",
       "author": "Mikhail Bulgakov",
       "year": 1967,
+      "genre": "Fantasy",
       "description": "A satirical novel about Satan's visit to the atheistic Soviet Union, interweaving several plot lines including a love story and a vision of Christ's crucifixion."
     },
     {
       "id": 43,
-      "title": "Their Eyes Were Watching God",
-      "author": "Zora Neale Hurston",
-      "year": 1937,
-      "description": "A Southern love story about Janie Crawford's quest for romantic love and self-fulfillment under the constraints of racism and gender roles."
+      "title": "Cloud Atlas",
+      "author": "David Mitchell",
+      "year": 2004,
+      "genre": "Science Fiction",
+      "description": "Six nested stories spanning from the 19th century to a post-apocalyptic future, exploring themes of reincarnation and human connection."
     },
     {
       "id": 44,
       "title": "The Tale of Genji",
       "author": "Murasaki Shikibu",
       "year": 1010,
+      "genre": "Literary Fiction",
       "description": "A classic work of Japanese literature following the romantic life of Prince Genji and the cultural customs of the Heian court."
     },
     {
       "id": 45,
-      "title": "The Metamorphosis",
-      "author": "Franz Kafka",
-      "year": 1915,
-      "description": "A novella about a traveling salesman who wakes one morning to find himself transformed into a huge insect, exploring themes of alienation and family obligation."
+      "title": "Gone Girl",
+      "author": "Gillian Flynn",
+      "year": 2012,
+      "genre": "Mystery",
+      "description": "A psychological thriller about a woman's disappearance and the media circus that surrounds her husband as the prime suspect."
     },
     {
       "id": 46,
-      "title": "Mrs. Dalloway",
-      "author": "Virginia Woolf",
-      "year": 1925,
-      "description": "A novel that details a day in the life of Clarissa Dalloway, a fictional high-society woman in post-World War I England."
+      "title": "The Goldfinch",
+      "author": "Donna Tartt",
+      "year": 2013,
+      "genre": "Literary Fiction",
+      "description": "A coming-of-age novel about a boy who survives a terrorist bombing at an art museum that kills his mother and steals a famous painting."
     },
     {
       "id": 47,
-      "title": "The Iliad",
-      "author": "Homer",
-      "year": -750,
-      "description": "An ancient Greek epic poem set during the Trojan War, focusing on the anger of Achilles and its consequences."
+      "title": "The Road",
+      "author": "Cormac McCarthy",
+      "year": 2006,
+      "genre": "Science Fiction",
+      "description": "A post-apocalyptic tale of a father and son's journey through a devastated America."
     },
     {
       "id": 48,
-      "title": "One Day in the Life of Ivan Denisovich",
-      "author": "Alexander Solzhenitsyn",
-      "year": 1962,
-      "description": "A novel describing a single day in the life of a prisoner in a Soviet labor camp during the Stalin era."
+      "title": "The Underground Railroad",
+      "author": "Colson Whitehead",
+      "year": 2016,
+      "genre": "Historical Fiction",
+      "description": "A novel that imagines the Underground Railroad as a literal subway system helping slaves escape to freedom."
     },
     {
       "id": 49,
-      "title": "The Adventures of Huckleberry Finn",
-      "author": "Mark Twain",
-      "year": 1884,
-      "description": "A novel following a young boy and a runaway slave as they journey down the Mississippi River, exploring themes of friendship and racism in the antebellum South."
+      "title": "The Iliad",
+      "author": "Homer",
+      "year": -750,
+      "genre": "Poetry",
+      "description": "An ancient Greek epic poem about the Trojan War and the rage of Achilles."
     },
     {
       "id": 50,
-      "title": "The Aeneid",
-      "author": "Virgil",
-      "year": -19,
-      "description": "An epic poem following Aeneas's journey from Troy to Italy, where he becomes the ancestor of the Romans."
+      "title": "Never Let Me Go",
+      "author": "Kazuo Ishiguro",
+      "year": 2005,
+      "genre": "Science Fiction",
+      "description": "A dystopian novel about students at a mysterious boarding school discovering the dark truth about their existence."
     },
     {
       "id": 51,
-      "title": "The Sun Also Rises",
-      "author": "Ernest Hemingway",
-      "year": 1926,
-      "description": "A novel about American and British expatriates traveling from Paris to Pamplona for the running of the bulls, depicting the Lost Generation."
+      "title": "The Brief Wondrous Life of Oscar Wao",
+      "author": "Junot Díaz",
+      "year": 2007,
+      "genre": "Literary Fiction",
+      "description": "A novel about a Dominican-American boy's quest for love while potentially being affected by an ancient curse."
     },
     {
       "id": 52,
-      "title": "The Jungle",
-      "author": "Upton Sinclair",
-      "year": 1906,
-      "description": "A novel exposing the harsh conditions and exploited lives of immigrants in the Chicago meat-packing industry."
+      "title": "Station Eleven",
+      "author": "Emily St. John Mandel",
+      "year": 2014,
+      "genre": "Science Fiction",
+      "description": "A novel following a traveling Shakespeare company in a post-apocalyptic world devastated by a pandemic."
     },
     {
       "id": 53,
-      "title": "Invisible Man",
-      "author": "Ralph Ellison",
-      "year": 1952,
-      "description": "A novel about an African American man whose skin color renders him invisible in society, exploring themes of identity and racism."
+      "title": "All the Light We Cannot See",
+      "author": "Anthony Doerr",
+      "year": 2014,
+      "genre": "Historical Fiction",
+      "description": "A story about a blind French girl and a German boy whose paths collide during World War II."
     },
     {
       "id": 54,
-      "title": "The Old Man and the Sea",
-      "author": "Ernest Hemingway",
-      "year": 1952,
-      "description": "A novella about an aging Cuban fisherman who struggles with a giant marlin far out in the Gulf Stream."
+      "title": "The Three-Body Problem",
+      "author": "Liu Cixin",
+      "year": 2008,
+      "genre": "Science Fiction",
+      "description": "A science fiction novel about humanity's first contact with an alien civilization during China's Cultural Revolution."
     },
     {
       "id": 55,
-      "title": "Dracula",
-      "author": "Bram Stoker",
-      "year": 1897,
-      "description": "A Gothic horror novel about Count Dracula's attempt to move from Transylvania to England and the battle between him and a group of people led by Professor Van Helsing."
+      "title": "Pachinko",
+      "author": "Min Jin Lee",
+      "year": 2017,
+      "genre": "Historical Fiction",
+      "description": "An epic saga following four generations of a Korean family who immigrate to Japan."
     },
     {
       "id": 56,
-      "title": "A Tale of Two Cities",
-      "author": "Charles Dickens",
-      "year": 1859,
-      "description": "A historical novel set in London and Paris before and during the French Revolution, following several characters caught between the two cities."
+      "title": "The Metamorphosis",
+      "author": "Franz Kafka",
+      "year": 1915,
+      "genre": "Literary Fiction",
+      "description": "A novella about a traveling salesman who wakes one morning to find himself transformed into a giant insect."
     },
     {
       "id": 57,
-      "title": "As I Lay Dying",
-      "author": "William Faulkner",
-      "year": 1930,
-      "description": "A novel about the death of Addie Bundren and her family's quest to honor her wish to be buried in her hometown."
+      "title": "A Little Life",
+      "author": "Hanya Yanagihara",
+      "year": 2015,
+      "genre": "Literary Fiction",
+      "description": "A devastating story following four college friends in New York City, focusing on one's struggle with trauma and relationships."
     },
     {
       "id": 58,
-      "title": "The Good Earth",
-      "author": "Pearl S. Buck",
-      "year": 1931,
-      "description": "A novel about a Chinese farmer and his connection to the land, depicting life in agrarian China."
+      "title": "Project Hail Mary",
+      "author": "Andy Weir",
+      "year": 2021,
+      "genre": "Science Fiction",
+      "description": "An astronaut wakes up alone on a spaceship with no memory of how he got there, tasked with saving humanity from extinction."
     },
     {
       "id": 59,
-      "title": "Heart of Darkness",
-      "author": "Joseph Conrad",
-      "year": 1899,
-      "description": "A novella about a voyage up the Congo River into the Congo Free State, exploring imperialism and racism."
+      "title": "Tomorrow, and Tomorrow, and Tomorrow",
+      "author": "Gabrielle Zevin",
+      "year": 2022,
+      "genre": "Literary Fiction",
+      "description": "A novel spanning thirty years, following two friends who collaborate on video game design while exploring love, friendship, and creativity."
     },
     {
       "id": 60,
-      "title": "Native Son",
-      "author": "Richard Wright",
-      "year": 1940,
-      "description": "A novel following a young African American man in Chicago whose life spirals after he kills a young white woman in a moment of panic."
-    },
-    {
-      "id": 61,
-      "title": "On the Road",
-      "author": "Jack Kerouac",
-      "year": 1957,
-      "description": "A novel based on the travels of Kerouac and his friends across the United States, defining the Beat Generation."
-    },
-    {
-      "id": 62,
-      "title": "The Plague",
-      "author": "Albert Camus",
-      "year": 1947,
-      "description": "A novel about a plague sweeping through a city in French Algeria, exploring how people respond to death and isolation."
-    },
-    {
-      "id": 63,
-      "title": "A Passage to India",
-      "author": "E.M. Forster",
-      "year": 1924,
-      "description": "A novel about the relationship between Britain and India during the Indian independence movement."
-    },
-    {
-      "id": 64,
-      "title": "Wuthering Heights",
-      "author": "Emily Brontë",
-      "year": 1847,
-      "description": "A Gothic novel about the passionate and destructive love between Catherine Earnshaw and Heathcliff on the Yorkshire moors."
-    },
-    {
-      "id": 65,
-      "title": "The Awakening",
-      "author": "Kate Chopin",
-      "year": 1899,
-      "description": "A novel about a woman's struggle against the social constraints of late 19th-century Louisiana Creole society."
-    },
-    {
-      "id": 66,
-      "title": "Death of a Salesman",
-      "author": "Arthur Miller",
-      "year": 1949,
-      "description": "A play about the tragic life of Willy Loman and his pursuit of the American Dream."
-    },
-    {
-      "id": 67,
-      "title": "All Quiet on the Western Front",
-      "author": "Erich Maria Remarque",
-      "year": 1929,
-      "description": "An anti-war novel depicting the extreme physical and mental trauma experienced by German soldiers during World War I."
-    },
-    {
-      "id": 68,
-      "title": "The Three Musketeers",
-      "author": "Alexandre Dumas",
-      "year": 1844,
-      "description": "A historical adventure novel following a young man who leaves home to join the Musketeers of the Guard."
+      "title": "Fairy Tale",
+      "author": "Stephen King",
+      "year": 2022,
+      "genre": "Fantasy",
+      "description": "A coming-of-age story about a teenage boy who inherits the keys to a parallel world where good and evil are at war."
     }
+  ]
+}
