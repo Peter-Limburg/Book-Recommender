@@ -1,15 +1,26 @@
 import express from 'express';
 import cors from 'cors';
 import 'dotenv/config';
+import { parseNaturalLanguageQuery } from './controller/userController.js';
+import { queryDatabase } from './controller/databaseController.js';
+import { queryOpenAI } from './controller/openaiController.js';
 
 const app = express();
 
 app.use(cors());
 app.use(express.json());
 
-app.post('/api', (req, res) => {});
+app.post(
+  '/api',
+  parseNaturalLanguageQuery,
+  queryOpenAI,
+  queryDatabase,
+  (req, res) => {
+    return res.status(200).json(res.locals.recommendation);
+  }
+);
 
-const errorHandler = (err, _req, res, _next) => {
+const errorHandler = (err, req, res, next) => {
   const defaultErr = {
     log: 'Express error handler caught unknown middleware error',
     status: 500,
