@@ -1,37 +1,46 @@
 import React, { useState } from 'react';
 import './App.css';
 
-interface parsedConverterResponse {
-  databaseQuery: string;
-}
 function App() {
   //useState will go here
   //example:
+  //User's input for openai
+  const [databaseQuery, setDatabaseQuery] = useState('');
+  //User's query for user
   const [userQuery, setUserQuery] = useState('');
-  const [recommendation, setRecommendation] = useState('');
+  //Recommendation is database query result
+  const [recommendation, setRecommendation] = useState([]);
+  const [loading, setLoading] = useState('false');
   const [error, setError] = useState('');
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    setRecommendation('');
+    setLoading(true);
+    setError('');
+    setDatabaseQuery('');
+    setRecommendation([]);
 
     try {
       const converterResponse = await fetch('/api', {
         method: 'POST',
-headers : {
-  'Content-Type': 'application/json',
-},
-body: JSON.stringify({userQuery}),
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ userQuery }),
       });
-      if (converterResponse.status !== 200) {
+      if (!converterResponse.ok) {
         const parsedError = await converterResponse.json();
         setError(parsedError.err);
       } else {
         const parsedConverterResponse = await converterResponse.json();
-
-    };
-
-
+        setDatabaseQuery(parsedConverterResponse.databaseQuery);
+        setRecommendation(parsedConverterResponse.recommendation);
+      }
+    } catch (err) {
+      setError('Error processing your request.');
+    } finally {
+      setLoading(false);
+    }
   };
 
   return (
@@ -48,12 +57,14 @@ body: JSON.stringify({userQuery}),
             placeholder='Enter a description of what you are looking for'
           />
         </label>
-        <button type='submit'>Get book recommendation</button>
+        <button type='submit' disabled={loading}>
+          {loading ? 'Getting Recommendation...' : 'Get Recommendation'}
+        </button>
       </form>
-      <div>
-        <h2>Recommendation:</h2>
-        <p>{recommendation}</p>
-      </div>
+      {/*Only shows error paragraph if error state exists*/}
+      {error && <p className='error'>{error}</p>}
+      {/*Only shows recommendaiton paragraph if recommendation state exists*/}
+      {recommendation && <p className='recommendation'>{recommendation}</p>}
     </div>
   );
 }
