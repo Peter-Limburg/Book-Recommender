@@ -9,18 +9,13 @@ app.use(express.json());
 
 app.post('/api', (req, res) => {});
 
-const errorHandler: ErrorRequestHandler = (
-  err: ServerError,
-  _req,
-  res,
-  _next
-) => {
-  const defaultErr: ServerError = {
+const errorHandler = (err, _req, res, _next) => {
+  const defaultErr = {
     log: 'Express error handler caught unknown middleware error',
     status: 500,
     message: { err: 'An error occurred' },
   };
-  const errorObj: ServerError = { ...defaultErr, ...err };
+  const errorObj = { ...defaultErr, ...err };
   console.log(errorObj.log);
   res.status(errorObj.status).json(errorObj.message);
 };
