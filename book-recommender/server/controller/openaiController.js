@@ -1,6 +1,5 @@
 import OpenAI from 'openai';
 import dotenv from 'dotenv';
-// import { RequestHandler } from 'express';
 dotenv.config();
 
 const openai = new OpenAI({
@@ -9,16 +8,16 @@ const openai = new OpenAI({
 
 const db_tables = `
     CREATE TABLE books (
-    id SERIAL PRIMARY KEY,
-    title TEXT NOT NULL,
-    authors TEXT NOT NULL,
-    categories TEXT NOT NULL,
-    thumbnail TEXT,
-    description TEXT,
-    published_date INT,
-    rating FLOAT,
-    num_pages INT
-);`;
+        id SERIAL PRIMARY KEY,
+        title TEXT NOT NULL,
+        authors TEXT NOT NULL,
+        categories TEXT NOT NULL,
+        thumbnail TEXT,
+        description TEXT,
+        published_date INT,
+        rating FLOAT,
+        num_pages INT
+    );`;
 
 export const queryOpenAI = async (req, res, next) => {
   const { naturalLanguageQuery } = res.locals;
@@ -32,7 +31,9 @@ export const queryOpenAI = async (req, res, next) => {
     return next(error);
   }
 
-  const prompt = 'You are a natural language databse interface.';
+  const prompt = `
+    You are a helpful assistant. Convert natural language queries into SQL queries for a PostgreSQL database.
+    `;
   try {
     const completion = await openai.chat.completion.create({
       model: 'gpt-4o',
