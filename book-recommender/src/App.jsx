@@ -4,33 +4,31 @@ import './App.css';
 function App() {
   //useState will go here
   //example:
-  //const [userQuery, setUserQuery] = useState('');
-
+  const [userQuery, setUserQuery] = useState('');
+  const [recommendation, setRecommendation] = useState('');
   const handleSubmit = async (e) => {};
 
   return (
-    <>
+    <div>
+      <header>
+        <h1>Let's discover your next great read!</h1>
+      </header>
+      <form onSubmit={handleSubmit}>
+        <label>
+          I want to read a book about:{' '}
+          <input
+            type='text'
+            value={userQuery}
+            placeholder='Enter a description of what you are looking for'
+          />
+        </label>
+        <button type='submit'>Get book recommendation</button>
+      </form>
       <div>
-        <a href='https://vite.dev' target='_blank'>
-          <img src={viteLogo} className='logo' alt='Vite logo' />
-        </a>
-        <a href='https://react.dev' target='_blank'>
-          <img src={reactLogo} className='logo react' alt='React logo' />
-        </a>
+        <h2>Recommendation:</h2>
+        <p>{recommendation}</p>
       </div>
-      <h1>Vite + React</h1>
-      <div className='card'>
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className='read-the-docs'>
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
+    </div>
   );
 }
 
