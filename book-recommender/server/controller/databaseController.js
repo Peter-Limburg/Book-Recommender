@@ -25,7 +25,6 @@ pool
 export const queryDatabase = async (_req, res, next) => {
  
     const { databaseQuery } = res.locals;
-    
     console.log(databaseQuery);
   
     if (!databaseQuery) {
