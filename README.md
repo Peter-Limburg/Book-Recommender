@@ -341,4 +341,140 @@
     {
       "id": 49,
       "title": "The Adventures of Huckleberry Finn",
-      "author": "Mark Tw
+      "author": "Mark Twain",
+      "year": 1884,
+      "description": "A novel following a young boy and a runaway slave as they journey down the Mississippi River, exploring themes of friendship and racism in the antebellum South."
+    },
+    {
+      "id": 50,
+      "title": "The Aeneid",
+      "author": "Virgil",
+      "year": -19,
+      "description": "An epic poem following Aeneas's journey from Troy to Italy, where he becomes the ancestor of the Romans."
+    },
+    {
+      "id": 51,
+      "title": "The Sun Also Rises",
+      "author": "Ernest Hemingway",
+      "year": 1926,
+      "description": "A novel about American and British expatriates traveling from Paris to Pamplona for the running of the bulls, depicting the Lost Generation."
+    },
+    {
+      "id": 52,
+      "title": "The Jungle",
+      "author": "Upton Sinclair",
+      "year": 1906,
+      "description": "A novel exposing the harsh conditions and exploited lives of immigrants in the Chicago meat-packing industry."
+    },
+    {
+      "id": 53,
+      "title": "Invisible Man",
+      "author": "Ralph Ellison",
+      "year": 1952,
+      "description": "A novel about an African American man whose skin color renders him invisible in society, exploring themes of identity and racism."
+    },
+    {
+      "id": 54,
+      "title": "The Old Man and the Sea",
+      "author": "Ernest Hemingway",
+      "year": 1952,
+      "description": "A novella about an aging Cuban fisherman who struggles with a giant marlin far out in the Gulf Stream."
+    },
+    {
+      "id": 55,
+      "title": "Dracula",
+      "author": "Bram Stoker",
+      "year": 1897,
+      "description": "A Gothic horror novel about Count Dracula's attempt to move from Transylvania to England and the battle between him and a group of people led by Professor Van Helsing."
+    },
+    {
+      "id": 56,
+      "title": "A Tale of Two Cities",
+      "author": "Charles Dickens",
+      "year": 1859,
+      "description": "A historical novel set in London and Paris before and during the French Revolution, following several characters caught between the two cities."
+    },
+    {
+      "id": 57,
+      "title": "As I Lay Dying",
+      "author": "William Faulkner",
+      "year": 1930,
+      "description": "A novel about the death of Addie Bundren and her family's quest to honor her wish to be buried in her hometown."
+    },
+    {
+      "id": 58,
+      "title": "The Good Earth",
+      "author": "Pearl S. Buck",
+      "year": 1931,
+      "description": "A novel about a Chinese farmer and his connection to the land, depicting life in agrarian China."
+    },
+    {
+      "id": 59,
+      "title": "Heart of Darkness",
+      "author": "Joseph Conrad",
+      "year": 1899,
+      "description": "A novella about a voyage up the Congo River into the Congo Free State, exploring imperialism and racism."
+    },
+    {
+      "id": 60,
+      "title": "Native Son",
+      "author": "Richard Wright",
+      "year": 1940,
+      "description": "A novel following a young African American man in Chicago whose life spirals after he kills a young white woman in a moment of panic."
+    },
+    {
+      "id": 61,
+      "title": "On the Road",
+      "author": "Jack Kerouac",
+      "year": 1957,
+      "description": "A novel based on the travels of Kerouac and his friends across the United States, defining the Beat Generation."
+    },
+    {
+      "id": 62,
+      "title": "The Plague",
+      "author": "Albert Camus",
+      "year": 1947,
+      "description": "A novel about a plague sweeping through a city in French Algeria, exploring how people respond to death and isolation."
+    },
+    {
+      "id": 63,
+      "title": "A Passage to India",
+      "author": "E.M. Forster",
+      "year": 1924,
+      "description": "A novel about the relationship between Britain and India during the Indian independence movement."
+    },
+    {
+      "id": 64,
+      "title": "Wuthering Heights",
+      "author": "Emily Brontë",
+      "year": 1847,
+      "description": "A Gothic novel about the passionate and destructive love between Catherine Earnshaw and Heathcliff on the Yorkshire moors."
+    },
+    {
+      "id": 65,
+      "title": "The Awakening",
+      "author": "Kate Chopin",
+      "year": 1899,
+      "description": "A novel about a woman's struggle against the social constraints of late 19th-century Louisiana Creole society."
+    },
+    {
+      "id": 66,
+      "title": "Death of a Salesman",
+      "author": "Arthur Miller",
+      "year": 1949,
+      "description": "A play about the tragic life of Willy Loman and his pursuit of the American Dream."
+    },
+    {
+      "id": 67,
+      "title": "All Quiet on the Western Front",
+      "author": "Erich Maria Remarque",
+      "year": 1929,
+      "description": "An anti-war novel depicting the extreme physical and mental trauma experienced by German soldiers during World War I."
+    },
+    {
+      "id": 68,
+      "title": "The Three Musketeers",
+      "author": "Alexandre Dumas",
+      "year": 1844,
+      "description": "A historical adventure novel following a young man who leaves home to join the Musketeers of the Guard."
+    }
