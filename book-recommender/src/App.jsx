@@ -10,7 +10,7 @@ function App() {
   const [userQuery, setUserQuery] = useState('');
   //Recommendation is database query result
   const [recommendation, setRecommendation] = useState([]);
-  const [loading, setLoading] = useState('false');
+  const [loading, setLoading] = useState(false);
   const [error, setError] = useState('');
 
   const handleSubmit = async (e) => {
@@ -54,6 +54,7 @@ function App() {
           <input
             type='text'
             value={userQuery}
+            onChange={(e) => setUserQuery(e.target.value)}
             placeholder='Enter a description of what you are looking for'
           />
         </label>
