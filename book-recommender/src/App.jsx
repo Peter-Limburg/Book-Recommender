@@ -1,12 +1,38 @@
 import React, { useState } from 'react';
 import './App.css';
 
+interface parsedConverterResponse {
+  databaseQuery: string;
+}
 function App() {
   //useState will go here
   //example:
   const [userQuery, setUserQuery] = useState('');
   const [recommendation, setRecommendation] = useState('');
-  const handleSubmit = async (e) => {};
+  const [error, setError] = useState('');
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setRecommendation('');
+
+    try {
+      const converterResponse = await fetch('/api', {
+        method: 'POST',
+headers : {
+  'Content-Type': 'application/json',
+},
+body: JSON.stringify({userQuery}),
+      });
+      if (converterResponse.status !== 200) {
+        const parsedError = await converterResponse.json();
+        setError(parsedError.err);
+      } else {
+        const parsedConverterResponse = await converterResponse.json();
+
+    };
+
+
+  };
 
   return (
     <div>
