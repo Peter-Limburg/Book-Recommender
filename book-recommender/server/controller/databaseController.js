@@ -46,15 +46,8 @@ export const queryDatabase = async (_req, res, next) => {
     return next();
 
   } catch (error) {
-    console.error('Database query error details:', {
-      message: error.message,
-      stack: error.stack,
-    });
-    return next({
-      log: 'Error executing database query',
-      status: 500,
-      message: { err: error.message },
-    });
+    
+    return next(error)
   }
 };
 
