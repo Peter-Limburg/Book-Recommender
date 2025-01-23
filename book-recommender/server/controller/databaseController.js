@@ -16,35 +16,32 @@ pool
     client.release();
   })
   .catch((err) => {
-    console.error('Error connecting to the database during server startup:', err.message);
+    console.error(
+      'Error connecting to the database during server startup:',
+      err.message
+    );
     process.exit(1);
   });
 
-  
-
 export const queryDatabase = async (_req, res, next) => {
- 
-    const { databaseQuery } = res.locals;
-    console.log(databaseQuery);
-  
-    if (!databaseQuery) {
-      const error = {
-        log: 'Database query middleware did not receive a query 1',
-        status: 500,
-        message: { err: 'An error occurred before querying the database 1' },
-      };
-      return next(error);
-    }
+  const { databaseQuery } = res.locals;
+  console.log(databaseQuery);
+
+  if (!databaseQuery) {
+    const error = {
+      log: 'Database query middleware did not receive a query 1',
+      status: 500,
+      message: { err: 'An error occurred before querying the database 1' },
+    };
+    return next(error);
+  }
 
   try {
-    
-
     const response = await pool.query(databaseQuery); // Access the query method
     console.log('Query successful:', response.rows);
 
-    res.locals.recommendation= response.rows;
+    res.locals.recommendation = response.rows;
     return next();
-
   } catch (error) {
     console.error('Database query error details:', {
       message: error.message,
@@ -57,4 +54,3 @@ export const queryDatabase = async (_req, res, next) => {
     });
   }
 };
-

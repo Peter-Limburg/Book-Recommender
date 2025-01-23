@@ -8,17 +8,17 @@ const openai = new OpenAI({
 });
 
 const db_tables = `
-    Minibooks Table Schema:
-    - id: int8
-    - title: text
-    - authors: text
-    - categories: text
-    - thumbnail: text
-    - description: text
-    - published_date: int8
-    - rating: float8
-    - num_pages: int8
-    `;
+    CREATE TABLE books (
+    id SERIAL PRIMARY KEY,
+    title TEXT NOT NULL,
+    authors TEXT NOT NULL,
+    categories TEXT NOT NULL,
+    thumbnail TEXT,
+    description TEXT,
+    published_date INT,
+    rating FLOAT,
+    num_pages INT
+);`;
 
 export const queryOpenAI = async (req, res, next) => {
   const { naturalLanguageQuery } = res.locals;
