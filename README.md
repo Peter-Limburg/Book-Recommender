@@ -315,7 +315,6 @@
         "genre": "Science Fiction",
         "description": "An auteur investigates a time travel anomaly linking a British exile in 1912, a moon colony writer, and a pandemic-era violinist."
       },
-
     {
       "id": 40,
       "title": "Slaughterhouse-Five",
