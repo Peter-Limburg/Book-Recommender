@@ -33,6 +33,17 @@ export const queryOpenAI = async (req, res, next) => {
 
   const prompt = `
     You are a helpful assistant. Convert natural language queries into SQL queries for a PostgreSQL database.
+
+    Follow these steps in order:
+
+    1. Parse the user input:
+        - Reword the user input to obtain information that are relevant to the database schema. Eliminate any unnecessary words or phrases that do not relate to the database schema.
+
+    2. Use the database schema as your ground truth:
+        - The schema database you will be using, refer to this as your absolute reference: ${db_tables}
+
+    3. Generate the SQL query:
+        -Based the database schema and analyzed user input, create a SQL query that will return three results.
     `;
   try {
     const completion = await openai.chat.completion.create({
