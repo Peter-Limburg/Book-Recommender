@@ -1,22 +1,22 @@
-import express from 'express';
-import cors from 'cors';
-import 'dotenv/config';
-import { queryDatabase } from './controller/databaseController.js';
+import express from "express";
+import cors from "cors";
+import "dotenv/config";
+import { queryDatabase } from "./controller/databaseController.js";
 
 const app = express();
 
 app.use(cors());
 app.use(express.json());
 
-app.get('/api', queryDatabase, (req, res) => {
-  return res.status(200).json(res.locals.recommendation)
+app.get("/api", queryDatabase, (req, res) => {
+  return res.status(200).json(res.locals.recommendation);
 });
 
 const errorHandler = (err, _req, res, _next) => {
   const defaultErr = {
-    log: 'Express error handler caught unknown middleware error',
+    log: "Express error handler caught unknown middleware error",
     status: 500,
-    message: { err: 'An error occurred' },
+    message: { err: "An error occurred" },
   };
   const errorObj = { ...defaultErr, ...err };
   console.log(errorObj.log);
