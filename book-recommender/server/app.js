@@ -12,7 +12,7 @@ app.get("/api", queryDatabase, (req, res) => {
   return res.status(200).json(res.locals.recommendation);
 });
 
-const errorHandler = (err, _req, res, _next) => {
+const errorHandler = (err, req, res, next) => {
   const defaultErr = {
     log: "Express error handler caught unknown middleware error",
     status: 500,
