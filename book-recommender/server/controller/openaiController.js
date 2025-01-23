@@ -77,6 +77,6 @@ export const queryOpenAI = async (req, res, next) => {
         err: 'An error occurred while querying OpenAI',
       },
     };
-    next(error);
+    return next(error);
   }
 };
