@@ -6,9 +6,9 @@ export const parseNaturalLanguageQuery = async (req, res, next) => {
     // Check if the query exists
     if (!userQuery) {
       const error = {
-        log: 'User query not provided',
+        log: 'userQuery not provided',
         status: 400,
-        message: { err: 'A user query is required.' },
+        message: { err: 'A userQuery is required.' },
       };
       return next(error);
     }
@@ -18,7 +18,7 @@ export const parseNaturalLanguageQuery = async (req, res, next) => {
       const error = {
         log: 'User query is not a string',
         status: 400,
-        message: { err: 'The User query must be a string.' },
+        message: { err: 'The userQuery must be a string.' },
       };
       return next(error);
     }
