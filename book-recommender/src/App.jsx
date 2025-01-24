@@ -7,7 +7,7 @@ function App() {
   //User's input for openai
   const [databaseQuery, setDatabaseQuery] = useState('');
   //User's query for user
-  const [naturalLanguageQuery, setNaturalLanguageQuery] = useState('');
+  const [userQueryValue, setUserQuery] = useState('');
   //Recommendation is database query result
   const [recommendation, setRecommendation] = useState([]);
   const [loading, setLoading] = useState(false);
@@ -26,8 +26,11 @@ function App() {
         headers: {
           'Content-Type': 'application/json',
         },
-        body: JSON.stringify({ naturalLanguageQuery }),
+        body: JSON.stringify({ userQuery: userQueryValue }),
       });
+      console.log('user value query', userQueryValue);
+      console.log('response of the fetch', converterResponse);
+
       if (!converterResponse.ok) {
         const parsedError = await converterResponse.json();
         setError(parsedError.err);
@@ -44,28 +47,30 @@ function App() {
   };
 
   return (
-    <div>
+    <div className='container'>
       <header>
         <h1>Let's discover your next great read!</h1>
       </header>
-      <form onSubmit={handleSubmit}>
-        <label>
-          I want to read a book about:{' '}
-          <input
-            type='text'
-            value={naturalLanguageQuery}
-            onChange={(e) => setNaturalLanguageQuery(e.target.value)}
-            placeholder='Enter a description of what you are looking for'
-          />
-        </label>
-        <button type='submit' disabled={loading}>
-          {loading ? 'Getting Recommendation...' : 'Get Recommendation'}
-        </button>
-      </form>
-      {/*Only shows error paragraph if error state exists*/}
-      {error && <p className='error'>{error}</p>}
-      {/*Only shows recommendaiton paragraph if recommendation state exists*/}
-      {recommendation && <p className='recommendation'>{recommendation}</p>}
+      <div className='wrapper'>
+        <form onSubmit={handleSubmit}>
+          <label>
+            I want to read a book about:{' '}
+            <input
+              type='text'
+              value={userQueryValue}
+              onChange={(e) => setUserQuery(e.target.value)}
+              placeholder='Enter a description of what you are looking for'
+            />
+          </label>
+          <button type='submit' disabled={loading}>
+            {loading ? 'Getting Recommendation...' : 'Get Recommendation'}
+          </button>
+        </form>
+        {/*Only shows error paragraph if error state exists*/}
+        {error && <p className='error'>{error}</p>}
+        {/*Only shows recommendaiton paragraph if recommendation state exists*/}
+        {recommendation && <p className='recommendation'>{recommendation}</p>}
+      </div>
     </div>
   );
 }
