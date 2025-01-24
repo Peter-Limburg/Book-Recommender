@@ -4,6 +4,7 @@ import 'dotenv/config';
 import { parseNaturalLanguageQuery } from './controller/userController.js';
 import { queryDatabase } from './controller/databaseController.js';
 import { queryOpenAI } from './controller/openaiController.js';
+import { loggingService } from './controller/loggingService.js';
 
 const app = express();
 
@@ -22,6 +23,7 @@ app.post(
   parseNaturalLanguageQuery,
   queryOpenAI,
   queryDatabase,
+  loggingService,
   (_req, res) => {
     return res.status(200).json({ recommendation: res.locals.recommendation });
   }

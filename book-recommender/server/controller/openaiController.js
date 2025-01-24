@@ -39,16 +39,17 @@ export const queryOpenAI = async (req, res, next) => {
   }
   try {
     // logging
-    const data = await fs.promises.readFile(
-      path.resolve(__dirname, '../loggingService.json'),
-      'utf8'
-    );
 
-    const prevResultContext = data
-      ? JSON.parse(data).pop().databaseQueryResult
-      : '';
+    // const data = await fs.promises.readFile(
+    //   path.resolve(__dirname, '../loggingService.json'),
+    //   'utf8'
+    // );
 
-    console.log('prevResultContext', prevResultContext);
+    // const prevResultContext = data
+    //   ? JSON.parse(data).pop().databaseQueryResult
+    //   : '';
+
+    // console.log('prevResultContext', prevResultContext);
 
     const prompt = `
     You are a helpful assistant. Convert natural language queries into SQL queries for a PostgreSQL database.

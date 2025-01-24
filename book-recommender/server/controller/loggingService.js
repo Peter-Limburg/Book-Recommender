@@ -10,7 +10,7 @@ export const loggingService = async (req, res, next) => {
   if (
     !res.locals.naturalLanguageQuery ||
     !res.locals.databaseQuery ||
-    !res.locals.databaseQueryResult
+    !res.locals.recommendation
   ) {
     const error = {
       log: 'Necessary input was not provided',
@@ -21,7 +21,7 @@ export const loggingService = async (req, res, next) => {
   }
 
   const { naturalLanguageQuery, databaseQuery } = res.locals;
-  const databaseQueryResult = res.locals.databaseQueryResult[0]?.name;
+  const databaseQueryResult = res.locals.recommendation;
 
   console.log('naturalLanguageQuery: ', naturalLanguageQuery);
   try {
