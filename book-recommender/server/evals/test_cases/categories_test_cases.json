@@ -1,0 +1,180 @@
+[
+  {
+    "userQuery": "Show me books about thriller",
+    "expectedSQL": "SELECT title, authors, description, categories FROM books WHERE categories ILIKE '%thriller%' LIMIT 3;",
+    "expectedResults": []
+  },
+  {
+    "userQuery": "Show me books about romance",
+    "expectedSQL": "SELECT title, authors, description, categories FROM books WHERE categories ILIKE '%romance%' LIMIT 3;",
+    "expectedResults": [
+      {
+        "title": "The Once and Future King",
+        "authors": "Terence Hanbury White",
+        "description": "An omnibus volume of the author's complete story of the Arthurian epic which includes: \"The sword in the stone\" (1939), \"The witch in the wood\" (1939), \"The ill-made knight\" (1940), \"The candle in the wind\" (published for the first time), and \"The book of Merlyn.\" 1996.",
+        "categories": "Arthurian romances"
+      }
+    ]
+  },
+  {
+    "userQuery": "Show me books about horror",
+    "expectedSQL": "SELECT title, authors, description, categories FROM books WHERE categories ILIKE '%horror%' LIMIT 3;",
+    "expectedResults": []
+  },
+  {
+    "userQuery": "Show me books about American fiction",
+    "expectedSQL": "SELECT title, authors, description, categories FROM books WHERE categories ILIKE '%American fiction%' LIMIT 3;",
+    "expectedResults": [
+      {
+        "title": "The One Tree",
+        "authors": "Stephen R. Donaldson",
+        "description": "Volume Two of Stephen Donaldson's acclaimed second trilogy featuing the compelling anti-hero Thomas Covenant.",
+        "categories": "American fiction"
+      },
+      {
+        "title": "Assassin's Apprentice",
+        "authors": "Robin Hobb",
+        "description": "Fantasy-roman.",
+        "categories": "American fiction"
+      },
+      {
+        "title": "Girls' Night in",
+        "authors": "Jessica Adams;Chris Manby;Fiona Walker",
+        "description": "'Girls' Night In' features stories about growing up, growing out of, moving out, moving on, falling apart and getting it all together. So turn off your cell phone and curl up on the couch: this is one 'Girls' Night In' you won't want to miss.",
+        "categories": "American fiction"
+      }
+    ]
+  },
+  {
+    "userQuery": "Show me books about english fiction",
+    "expectedSQL": "SELECT title, authors, description, categories FROM books WHERE categories ILIKE '%English fiction%' LIMIT 3;",
+    "expectedResults": [
+      {
+        "title": "Mystical Paths",
+        "authors": "Susan Howatch",
+        "description": "1968 finds Nicholas Darrow wrestling with personal problems. How can he marry Rosalind when he is unable to avoid promiscuity? How can he become a priest when he finds it so difficult to live as one? And can he break his dangerous dependence on his father?",
+        "categories": "English fiction"
+      },
+      {
+        "title": "Glittering Images",
+        "authors": "Susan Howatch",
+        "description": "It is 1937, and Charles Ashworth, a Canon to the Archbishop of Canterbury, is sent to untangle a web of self-delusion and corruption at the episcopal palace of the charismatic Bishop of Starbridge.",
+        "categories": "English fiction"
+      }
+    ]
+  },
+  {
+    "userQuery": "Show me books about boys",
+    "expectedSQL": "SELECT title, authors, description, categories FROM books WHERE categories ILIKE '%boys%' LIMIT 3;",
+    "expectedResults": [
+      {
+        "title": "There's a Boy in the Girls' Bathroom",
+        "authors": "Louis Sachar",
+        "description": "A study guide for the novel There's a Boy in the Girl's bathroom.",
+        "categories": "Boys"
+      },
+      {
+        "title": "Close Range",
+        "authors": "Annie Proulx",
+        "description": "The title story in this collection of shorts now a film from Ang Lee.",
+        "categories": "Cowboys"
+      }
+    ]
+  },
+  {
+    "userQuery": "Show me books about fantasy",
+    "expectedSQL": "SELECT title, authors, description, categories FROM books WHERE categories ILIKE '%fantasy%' LIMIT 3;",
+    "expectedResults": [
+      {
+        "title": "Jimmy the Hand",
+        "authors": "Raymond E. Feist;S. M. Stirling",
+        "description": "Jimmy the Hand, boy thief of Krondor, lived in the shadows of the city. Though gifted beyond his peers, Jimmy is merely a pickpocket with potential--until he aids Prince Arutha in the rescue of Princess Anita from Duke Guy du Bas-Tyra, and runs afoul of \"Black Guy's\" secret police. Facing a choice between disappearing on his own or in a weighted barrel at the bottom of Krondor's harbor, Jimmy chooses the former. Forced to flee the only home he's ever known, Jimmy finds himself among the unsuspecting rural villagers of Land's End, where he hopes to prosper with his talents for con and thievery. But Land's End is home to many who tread the crooked path--and to a dark, dangerous presence even the local smugglers don't recognize. And suddenly Jimmy's youthful bravado and courage are leading him into the maw of chaos . . . and, quite possibly, to his doom.",
+        "categories": "Fantasy fiction"
+      },
+      {
+        "title": "The Mad Ship",
+        "authors": "Robin Hobb",
+        "description": "Fantasy master Robin Hobb delivers the stunning second volume of her Liveship Traders trilogy, returning to the timeless city of Bingtown, where pirates now plague the coasts and the dreaded slave trade flourishes. Althea Vestrit doesnt have time to be afraid, for her familys newly awakened Liveship, Vivacia, has been seized by the ruthless pirate Kennit. So Althea hatches a bold plan. But to carry it out, she must recruit a Liveship that has already slain two crews -- and is said to be insane.",
+        "categories": "Fantasy fiction"
+      },
+      {
+        "title": "The Lord of the Rings",
+        "authors": "John Ronald Reuel Tolkien",
+        "description": "Since it was first published in 1954, 'The Lord of the Rings' has been a book people have treasured. Steeped in unrivalled magic and otherworldliness, its sweeping fantasy has touched the hearts of young and old alike. Well over 100 million copies of its many editions have been sold around the world, and occasional collectors’ editions become prized and valuable items of publishing. With the epic trilogy now being released on film, images of the characters and landscapes have become eagerly sought after. Much of the look of the movies is based on Alan Lee’s paintings, giving this Centenary edition of Tolkien’s great work new relevance for the ever-growing number of fans.",
+        "categories": "Fantasy fiction, English"
+      }
+    ]
+  },
+  {
+    "userQuery": "Show me books about mystery",
+    "expectedSQL": "SELECT title, authors, description, categories FROM books WHERE categories ILIKE '%mystery%' LIMIT 3;",
+    "expectedResults": [
+      {
+        "title": "Spider's Web",
+        "authors": "Charles Osborne;Agatha Christie",
+        "description": "A new 'Christie for Christmas' -- a full-length novel adapted from her acclaimed play by Charles Osborne Following BLACK COFFEE and THE UNEXPECTED GUEST comes the final Agatha Christie play novelisation, bringing her superb storytelling to a new legion of fans. Clarissa, the wife of a Foreign Office diplomat, is given to daydreaming. 'Supposing I were to come down one morning and find a dead body in the library, what should I do?' she muses. Clarissa has her chance to find out when she discovers a body in the drawing-room of her house in Kent. Desperate to dispose of the body before her husband comes home with an important foreign politician, Clarissa persuades her three house guests to become accessories and accomplices. It seems that the murdered man was not unknown to certain members of the house party (but which ones?), and the search begins for the murderer and the motive, while at the same time trying to persuade a police inspector that there has been no murder at all... SPIDER'S WEB was written in 1954 specifically for Margaret Lockwood and opened first at the Theatre Royal Nottingham before moving to the Savoy Theatre in London on 14 December 1954. With THE MOUSETRAP and WI",
+        "categories": "mystery"
+      },
+      {
+        "title": "Miss Marple",
+        "authors": "Agatha Christie",
+        "description": "Miss Marple featured in 20 short stories, published in a number of different collections in Britain and America. Presented here in their order of publication, Miss Marple uses her unique insight to deduce the truth about a series of unsolved crimes.",
+        "categories": "Detective and mystery stories, English"
+      },
+      {
+        "title": "Murder in Mesopotamia",
+        "authors": "Agatha Christie",
+        "description": "An archaeologist's wife is murdered on the shores of the River Tigris in Iraq... It was clear to Amy Leatheran that something sinister was going on at the Hassanieh dig in Iraq; something associated with the presence of 'Lovely Louise', wife of celebrated archaeologist Dr Leidner. In a few days' time Hercule Poirot was due to drop in at the excavation site. But with Louise suffering from terrifying hallucinations, and tension within the group becoming almost unbearable, Poirot might just be too late...",
+        "categories": "Detective and mystery stories"
+      }
+    ]
+  },
+  {
+    "userQuery": "Show me books that are not about fiction",
+    "expectedSQL": "SELECT title, authors, description, categories FROM books WHERE categories NOT ILIKE '%fiction%' LIMIT 3;",
+    "expectedResults": [
+      {
+        "title": "Gilead",
+        "authors": "Marilynne Robinson",
+        "description": "A NOVEL THAT READERS and critics have been eagerly anticipating for over a decade, Gilead is an astonishingly imagined story of remarkable lives. John Ames is a preacher, the son of a preacher and the grandson (both maternal and paternal) of preachers. It’s 1956 in Gilead, Iowa, towards the end of the Reverend Ames’s life, and he is absorbed in recording his family’s story, a legacy for the young son he will never see grow up. Haunted by his grandfather’s presence, John tells of the rift between his grandfather and his father: the elder, an angry visionary who fought for the abolitionist cause, and his son, an ardent pacifist. He is troubled, too, by his prodigal namesake, Jack (John Ames) Boughton, his best friend’s lost son who returns to Gilead searching for forgiveness and redemption. Told in John Ames’s joyous, rambling voice that finds beauty, humour and truth in the smallest of life’s details, Gilead is a song of celebration and acceptance of the best and the worst the world has to offer. At its heart is a tale of the sacred bonds between fathers and sons, pitch-perfect in style and story, set to dazzle critics and readers alike.",
+        "categories": "Fiction"
+      },
+      {
+        "title": "Spider's Web",
+        "authors": "Charles Osborne;Agatha Christie",
+        "description": "A new 'Christie for Christmas' -- a full-length novel adapted from her acclaimed play by Charles Osborne Following BLACK COFFEE and THE UNEXPECTED GUEST comes the final Agatha Christie play novelisation, bringing her superb storytelling to a new legion of fans. Clarissa, the wife of a Foreign Office diplomat, is given to daydreaming. 'Supposing I were to come down one morning and find a dead body in the library, what should I do?' she muses. Clarissa has her chance to find out when she discovers a body in the drawing-room of her house in Kent. Desperate to dispose of the body before her husband comes home with an important foreign politician, Clarissa persuades her three house guests to become accessories and accomplices. It seems that the murdered man was not unknown to certain members of the house party (but which ones?), and the search begins for the murderer and the motive, while at the same time trying to persuade a police inspector that there has been no murder at all... SPIDER'S WEB was written in 1954 specifically for Margaret Lockwood and opened first at the Theatre Royal Nottingham before moving to the Savoy Theatre in London on 14 December 1954. With THE MOUSETRAP and WI",
+        "categories": "mystery"
+      },
+      {
+        "title": "Rage of angels",
+        "authors": "Sidney Sheldon",
+        "description": "A memorable, mesmerizing heroine Jennifer -- brilliant, beautiful, an attorney on the way up until the Mafia's schemes win her the hatred of an implacable enemy -- and a love more destructive than hate. A dangerous, dramatic world The Dark Arena of organized crime and flashbulb lit courtrooms where ambitious prosecutors begin their climb to political power.",
+        "categories": "Fiction"
+      }
+    ]
+  },
+  {
+    "userQuery": "Show me books about biography",
+    "expectedSQL": "SELECT title, authors, description, categories FROM books WHERE categories ILIKE '%biography%' LIMIT 3;",
+    "expectedResults": [
+      {
+        "title": "The Real Trial of Oscar Wilde",
+        "authors": "Merlin Holland",
+        "description": "Oscar Wilde had one of literary history's most explosive love affairs with Lord Alfred \"Bosie\" Douglas. In 1895, Bosie's father, the Marquess of Queensberry, delivered a note to the Albemarle Club addressed to \"Oscar Wilde posing as sodomite.\" With Bosie's encouragement, Wilde sued the Marquess for libel. He not only lost but he was tried twice for \"gross indecency\" and sent to prison with two years' hard labor. With this publication of the uncensored trial transcripts, readers can for the first time in more than a century hear Wilde at his most articulate and brilliant. The Real Trial of Oscar Wilde documents an alarmingly swift fall from grace; it is also a supremely moving testament to the right to live, work, and love as one's heart dictates.",
+        "categories": "Biography & Autobiography"
+      },
+      {
+        "title": "A Year in the Life of William Shakespeare",
+        "authors": "James Shapiro",
+        "description": "1599 was an epochal year for Shakespeare and England Shakespeare wrote four of his most famous plays: Henry the Fifth, Julius Caesar, As You Like It, and, most remarkably, Hamlet; Elizabethans sent off an army to crush an Irish rebellion, weathered an Armada threat from Spain, gambled on a fledgling East India Company, and waited to see who would succeed their aging and childless queen. James Shapiro illuminates both Shakespeare’s staggering achievement and what Elizabethans experienced in the course of 1599, bringing together the news and the intrigue of the times with a wonderful evocation of how Shakespeare worked as an actor, businessman, and playwright. The result is an exceptionally immediate and gripping account of an inspiring moment in history.",
+        "categories": "Biography & Autobiography"
+      },
+      {
+        "title": "Travels",
+        "authors": "Michael Crichton",
+        "description": "Often I feel I go to some distant region of the world to be reminded of who I really am. When Michael Crichton -- a Harvard-trained physician, bestselling novelist, and successful movie director -- began to feel isolated in his own life, he decided to widen his horizons. He tracked wild animals in the jungles of Rwanda. He climbed Kilimanjaro and Mayan pyramids. He trekked across a landslide in Pakistan. He swam amid sharks in Tahiti. Fueled by a powerful curiosity and the need to see, feel, and hear firsthand and close-up, Michael Crichton has experienced adventures as compelling as those he created in his books and films. These adventures -- both physical and spiritual -- are recorded here in Travels, Crichton's most astonishing and personal work.",
+        "categories": "Biography & Autobiography"
+      }
+    ]
+  }
+]
