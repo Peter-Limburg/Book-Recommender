@@ -11,8 +11,8 @@ app.use(
   cors({
     origin: 'http://localhost:5173', // Your frontend's URL
     methods: ['GET', 'POST', 'DELETE', 'PUT'],
-    allowedHeaders: ['Content-Type', 'Authorization'],
-    credentials: true, // Allow cookies and credentials
+    allowedHeaders: ['Content-Type'],
+    // credentials: true, // Allow cookies and credentials
   })
 );
 app.use(express.json());
@@ -22,8 +22,8 @@ app.post(
   parseNaturalLanguageQuery,
   queryOpenAI,
   queryDatabase,
-  (req, res) => {
-    return res.status(200).json(res.locals.recommendation);
+  (_req, res) => {
+    return res.status(200).json({ recommendation: res.locals.recommendation });
   }
 );
 

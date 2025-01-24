@@ -5,9 +5,9 @@ function App() {
   //useState will go here
   //example:
   //User's input for openai
-  const [databaseQuery, setDatabaseQuery] = useState('');
+  // const [databaseQuery, setDatabaseQuery] = useState('');
   //User's query for user
-  const [userQueryValue, setUserQuery] = useState('');
+  const [userQuery, setUserQuery] = useState('');
   //Recommendation is database query result
   const [recommendation, setRecommendation] = useState([]);
   const [loading, setLoading] = useState(false);
@@ -17,7 +17,7 @@ function App() {
     e.preventDefault();
     setLoading(true);
     setError('');
-    setDatabaseQuery('');
+    // setDatabaseQuery('');
     setRecommendation([]);
 
     try {
@@ -26,19 +26,19 @@ function App() {
         headers: {
           'Content-Type': 'application/json',
         },
-        body: JSON.stringify({ userQuery: userQueryValue }),
+        body: JSON.stringify({ userQuery }),
       });
-      console.log('user value query', userQueryValue);
+      console.log('user value query', userQuery);
       console.log('response of the fetch', converterResponse);
 
       if (!converterResponse.ok) {
         const parsedError = await converterResponse.json();
         setError(parsedError.err);
-      } else {
-        const parsedConverterResponse = await converterResponse.json();
-        setDatabaseQuery(parsedConverterResponse.databaseQuery);
-        setRecommendation(parsedConverterResponse.recommendation);
       }
+      const parsedConverterResponse = await converterResponse.json();
+      console.log(parsedConverterResponse);
+      // setDatabaseQuery(parsedConverterResponse.databaseQuery);
+      setRecommendation(parsedConverterResponse.recommendation);
     } catch (err) {
       setError('Error processing your request.');
     } finally {
@@ -49,7 +49,7 @@ function App() {
   return (
     <div className='container'>
       <header>
-        <h1>Let's discover your next great read!</h1>
+        <h1>Let&apos;s discover your next great read!</h1>
       </header>
       <div className='wrapper'>
         <form onSubmit={handleSubmit}>
@@ -57,7 +57,7 @@ function App() {
             I want to read a book about:{' '}
             <input
               type='text'
-              value={userQueryValue}
+              value={userQuery}
               onChange={(e) => setUserQuery(e.target.value)}
               placeholder='Enter a description of what you are looking for'
             />
@@ -68,8 +68,22 @@ function App() {
         </form>
         {/*Only shows error paragraph if error state exists*/}
         {error && <p className='error'>{error}</p>}
-        {/*Only shows recommendaiton paragraph if recommendation state exists*/}
-        {recommendation && <p className='recommendation'>{recommendation}</p>}
+
+        {recommendation && (
+          <div className='recommendation'>
+            <h2>Recommendation:</h2>
+            <ul>
+              {recommendation.map((rec, index) => (
+                <li key={index}>
+                  <strong>Title:</strong> {rec.title} <br />
+                  <strong>Author:</strong> {rec.author} <br />
+                  <strong>Description:</strong> {rec.description} <br />
+                  <strong>Categories:</strong> {rec.categories}
+                </li>
+              ))}
+            </ul>
+          </div>
+        )}
       </div>
     </div>
   );
