@@ -7,7 +7,14 @@ import { queryOpenAI } from './controller/openaiController.js';
 
 const app = express();
 
-app.use(cors());
+app.use(
+  cors({
+    origin: 'http://localhost:5173', // Your frontend's URL
+    methods: ['GET', 'POST', 'DELETE', 'PUT'],
+    allowedHeaders: ['Content-Type', 'Authorization'],
+    credentials: true, // Allow cookies and credentials
+  })
+);
 app.use(express.json());
 
 app.post(
