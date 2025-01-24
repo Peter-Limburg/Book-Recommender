@@ -1,5 +1,9 @@
 import OpenAI from 'openai';
 import dotenv from 'dotenv';
+import fs from 'fs';
+import path from 'path';
+import { fileURLToPath } from 'url';
+import { dirname } from 'path';
 dotenv.config();
 
 const openai = new OpenAI({
@@ -19,6 +23,9 @@ const db_tables = `
         num_pages INT
     );`;
 
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = dirname(__filename);
+
 export const queryOpenAI = async (req, res, next) => {
   const { naturalLanguageQuery } = res.locals;
 
@@ -30,8 +37,20 @@ export const queryOpenAI = async (req, res, next) => {
     };
     return next(error);
   }
+  try {
+    // logging
+    const data = await fs.promises.readFile(
+      path.resolve(__dirname, '../loggingService.json'),
+      'utf8'
+    );
 
-  const prompt = `
+    const prevResultContext = data
+      ? JSON.parse(data).pop().databaseQueryResult
+      : '';
+
+    console.log('prevResultContext', prevResultContext);
+
+    const prompt = `
     You are a helpful assistant. Convert natural language queries into SQL queries for a PostgreSQL database.
     You MUST only respond with valid SQL. Do NOT return markdown, only return SQL.
     If you are not able to produce a valid SQL for given input, then return an empty string.
@@ -47,15 +66,15 @@ export const queryOpenAI = async (req, res, next) => {
 
     3. Generate the SQL query:
         - Based the database schema and analyzed user input, create a SQL query that will return three results.
-        - When using "SELECT" you MUST "SELECT" title, author, description, and categories.
+        - When using "SELECT" you MUST "SELECT" title, authors, description, and categories.
         - The SQL query MUST be a "SELECT" query designed to return three rows of data from the database.
-        - Do not return any SQL queries that are capabale of altering data. Return queries that are solely "SELECT" queries. Do not return nested SQL queries.
-        - Ensure that the spelling of important key details (such as title, author, description) are consistent. 
+        - Do not return any SQL queries that are capable of altering data. Return queries that are solely "SELECT" queries. Do not return nested SQL queries.
+        - Ensure that the spelling of important key details (such as title, authors, description, and categories) are consistent. 
 
     4. Return the SQL query:
         - Return the SQL query that you generated. Do not return any other information or data.
     `;
-  try {
+    // moving try
     const completion = await openai.chat.completions.create({
       model: 'gpt-4o',
       logprobs: true,
@@ -77,9 +96,28 @@ export const queryOpenAI = async (req, res, next) => {
     console.log('AopenAI Response: ', completion.choices[0]?.message);
 
     const databaseQuery = completion.choices[0]?.message?.content;
-    res.locals.databaseQuery = databaseQuery.trim();
 
     console.log('Generated SQL Query:', databaseQuery);
+
+    if (!databaseQuery) {
+      const error = {
+        log: 'OpenAI did not return a completion',
+        status: 500,
+        message: {
+          err: 'An error occurred while querying OpenAI',
+        },
+      };
+      return next(error);
+    }
+
+    // logging props
+    const log_probs = completion.choices[0]?.logprobs?.content;
+    if (Array.isArray(log_probs)) {
+      for (const log of log_probs) {
+        console.log('==== Possible Tokens ====\n', log.top_logprobs);
+      }
+    }
+    res.locals.databaseQuery = databaseQuery.trim();
 
     return next();
   } catch (err) {
