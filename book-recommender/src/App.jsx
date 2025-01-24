@@ -48,9 +48,8 @@ function App() {
 
   return (
     <div className='container'>
-      <header>
-        <h1>Let's discover your next great read!</h1>
-      </header>
+      <h1>'Let\'s discover your next great read!'</h1>
+
       <div className='wrapper'>
         <form onSubmit={handleSubmit}>
           <label>
@@ -69,7 +68,21 @@ function App() {
         {/*Only shows error paragraph if error state exists*/}
         {error && <p className='error'>{error}</p>}
         {/*Only shows recommendaiton paragraph if recommendation state exists*/}
-        {recommendation && <p className='recommendation'>{recommendation}</p>}
+        {recommendation && (
+          <div className='recommendation'>
+            <h2>Recommendation:</h2>
+            <ul>
+              {recommendation.map((rec, index) => (
+                <li key={index}>
+                  <strong>Title:</strong> {rec.title} <br />
+                  <strong>Author:</strong> {rec.author} <br />
+                  <strong>Description:</strong> {rec.description} <br />
+                  <strong>Categories:</strong> {rec.categories}
+                </li>
+              ))}
+            </ul>
+          </div>
+        )}
       </div>
     </div>
   );
