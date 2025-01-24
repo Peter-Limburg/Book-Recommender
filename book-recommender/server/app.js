@@ -4,10 +4,18 @@ import 'dotenv/config';
 import { parseNaturalLanguageQuery } from './controller/userController.js';
 import { queryDatabase } from './controller/databaseController.js';
 import { queryOpenAI } from './controller/openaiController.js';
+import { loggingService } from './controller/loggingService.js';
 
 const app = express();
 
-app.use(cors());
+app.use(
+  cors({
+    origin: 'http://localhost:5173', // Your frontend's URL
+    methods: ['GET', 'POST', 'DELETE', 'PUT'],
+    allowedHeaders: ['Content-Type'],
+    // credentials: true, // Allow cookies and credentials
+  })
+);
 app.use(express.json());
 
 app.post(
@@ -15,8 +23,9 @@ app.post(
   parseNaturalLanguageQuery,
   queryOpenAI,
   queryDatabase,
-  (req, res) => {
-    return res.status(200).json(res.locals.recommendation);
+  loggingService,
+  (_req, res) => {
+    return res.status(200).json({ recommendation: res.locals.recommendation });
   }
 );
 
