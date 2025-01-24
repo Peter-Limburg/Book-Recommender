@@ -21,6 +21,7 @@ const db_tables = `
 
 export const queryOpenAI = async (req, res, next) => {
   const { naturalLanguageQuery } = res.locals;
+  console.log('naturalLanguageQuery\n', naturalLanguageQuery);
 
   if (!naturalLanguageQuery) {
     const error = {
@@ -74,7 +75,7 @@ export const queryOpenAI = async (req, res, next) => {
     });
 
     // debugging
-    console.log('AopenAI Response: ', completion.choices[0]?.message);
+    console.log('openAI Response: ', completion.choices[0]?.message);
 
     const databaseQuery = completion.choices[0]?.message?.content;
     res.locals.databaseQuery = databaseQuery.trim();
